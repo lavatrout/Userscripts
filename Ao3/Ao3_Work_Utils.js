@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ao3 Work Utilities
-// @namespace    
-// @version      0.1
+// @namespace    https://github.com/lavatrout/Userscripts
+// @version      0.0.01
 // @description  Utility functions for AO3 works.
 // @author       Lavatrout
 // @grant        GM.xmlHttpRequest
@@ -11,10 +11,11 @@
 // TODO @require     Ao3_Work_Error.user.js
 // ==/UserScript== 
 
-import { Ao3_Work_Error } from "./Ao3_Work_Error.js";
+// import Ao3_Work_Error.js
+import { Ao3_Work_Error } from "https://github.com/lavatrout/Userscripts/tree/c51018e8f5778fc493f33d221fa78da9678b9a6a/Ao3/Ao3_Work_Error.js";
 
 // import GM
-import { } from "https://github.com/greasemonkey/greasemonkey/tree/8a51d1432e8c1adbd761d2654b030e11efc11b74/src/bg/api-provider-source.js";
+//import { } from "https://github.com/greasemonkey/greasemonkey/tree/8a51d1432e8c1adbd761d2654b030e11efc11b74/src/bg/api-provider-source.js";
 
 /**
    * Returns the HTML DOM document of a given URL.

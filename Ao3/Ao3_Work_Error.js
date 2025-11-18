@@ -1,8 +1,8 @@
 
 // ==UserScript==
 // @name         Ao3 Work Error Class
-// @namespace    
-// @version      0.1
+// @namespace    https://github.com/lavatrout/Userscripts
+// @version      0.0.01
 // @description  Create a custom error type for AO3 Work related errors.
 // @author       Lavatrout
 // ==/UserScript==

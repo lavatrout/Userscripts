@@ -1,16 +1,18 @@
 // ==UserScript==
 // @name         Ao3 Work Object Class
-// @namespace    
-// @version      0.1
+// @namespace    https://github.com/lavatrout/Userscripts
+// @version      0.0.01
 // @description  Ao3 Work Object and Metadata Scraper
 // @author       Lavatrout
-// TODO @require      Ao3_Work_Error.user.js
-// TODO @require      Ao3_Work_Utils.user.js
 // ==/UserScript==
 
-import "./Ao3_Work_Utils.js";
-import { Ao3_Work_Error } from "./Ao3_Work_Error.js";
+import "https://github.com/lavatrout/Userscripts/tree/c51018e8f5778fc493f33d221fa78da9678b9a6a/Ao3/Ao3_Work_Utils.js";
+import "https://github.com/lavatrout/Userscripts/tree/c51018e8f5778fc493f33d221fa78da9678b9a6a/Ao3/Ao3_Work_Error.user.js";
 
+/**
+ * Ao3 Work Object Class
+ * Used to represent an Ao3 Work and its associated metadata
+ */
 class Ao3_Work {
   /**
    * Create a new Ao3_Work Object
