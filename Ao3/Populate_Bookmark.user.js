@@ -5,7 +5,7 @@
 // @run-at    document-end
 // @namespace https://github.com/lavatrout/Userscripts
 // @include   */archiveofourown.org/*works/*
-// @require   "https://github.com/lavatrout/Userscripts/tree/c51018e8f5778fc493f33d221fa78da9678b9a6a/Ao3/Ao3_Work.js";
+// @require   "https://github.com/lavatrout/Userscripts/blob/v0.0.01/Ao3/Ao3_Work.js";
 // ==/UserScript==
 
 (async () => {

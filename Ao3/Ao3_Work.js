@@ -6,8 +6,8 @@
 // @author       Lavatrout
 // ==/UserScript==
 
-import "https://github.com/lavatrout/Userscripts/tree/c51018e8f5778fc493f33d221fa78da9678b9a6a/Ao3/Ao3_Work_Utils.js";
-import "https://github.com/lavatrout/Userscripts/tree/c51018e8f5778fc493f33d221fa78da9678b9a6a/Ao3/Ao3_Work_Error.user.js";
+import "https://github.com/lavatrout/Userscripts/blob/v0.0.01/Ao3/Ao3_Work_Utils.js";
+import "https://github.com/lavatrout/Userscripts/blob/v0.0.01/Ao3/Ao3_Work_Error.js";
 
 /**
  * Ao3 Work Object Class
