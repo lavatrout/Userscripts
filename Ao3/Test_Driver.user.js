@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name      AO3 Bookmark Autofill
+// @name      Ao3 Test Driver
 // @author    Lavatrout
-// @version   0.01
+// @version   0.0.01
 // @run-at    document-end
 // @namespace https://github.com/lavatrout/Userscripts
 // @include   */archiveofourown.org/*works/*
-// @require   "https://github.com/lavatrout/Userscripts/blob/v0.0.01/Ao3/Ao3_Work.js";
+// @require   "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work.js";
 // ==/UserScript==
 
 (async () => {

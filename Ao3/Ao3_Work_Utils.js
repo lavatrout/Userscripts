@@ -12,7 +12,7 @@
 // ==/UserScript== 
 
 // import Ao3_Work_Error.js
-import "https://github.com/lavatrout/Userscripts/blob/v0.0.01/Ao3/Ao3_Work_Error.js";
+import "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js";
 
 // import GM
 //import { } from "https://github.com/greasemonkey/greasemonkey/tree/8a51d1432e8c1adbd761d2654b030e11efc11b74/src/bg/api-provider-source.js";

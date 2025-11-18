@@ -6,8 +6,8 @@
 // @author       Lavatrout
 // ==/UserScript==
 
-import "https://github.com/lavatrout/Userscripts/blob/v0.0.01/Ao3/Ao3_Work_Utils.js";
-import "https://github.com/lavatrout/Userscripts/blob/v0.0.01/Ao3/Ao3_Work_Error.js";
+import "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work_Utils.js";
+import "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js"
 
 /**
  * Ao3 Work Object Class
@@ -55,6 +55,8 @@ class Ao3_Work {
   async populateAo3MetaData() {
 
     console.log("Running Metadata Scraper...");
+
+    // TODO add error handling using Ao3_Work_Error
 
     // ------------------------------------------------------------------------------------------------
     // --  Meta Data
