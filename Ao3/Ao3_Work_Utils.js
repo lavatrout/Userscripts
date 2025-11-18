@@ -8,10 +8,13 @@
 // @grant        GM.getValue
 // @grant        GM.setValue
 // @grant        GM.deleteValue
+// TODO @require     Ao3_Work_Error.user.js
 // ==/UserScript== 
 
-// Import necessary modules
-import { Ao3_Work_Error } from "./Ao3_Work_Error.user.js";
+import { Ao3_Work_Error } from "./Ao3_Work_Error.js";
+
+// import GM
+import { } from "https://github.com/greasemonkey/greasemonkey/tree/8a51d1432e8c1adbd761d2654b030e11efc11b74/src/bg/api-provider-source.js";
 
 /**
    * Returns the HTML DOM document of a given URL.

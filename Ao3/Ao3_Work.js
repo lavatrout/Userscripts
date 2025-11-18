@@ -4,10 +4,12 @@
 // @version      0.1
 // @description  Ao3 Work Object and Metadata Scraper
 // @author       Lavatrout
+// TODO @require      Ao3_Work_Error.user.js
+// TODO @require      Ao3_Work_Utils.user.js
 // ==/UserScript==
 
-import "./Ao3_Work_Utils.user.js";
-import { Ao3_Work_Error } from "./Ao3_Work_Error.user.js";
+import "./Ao3_Work_Utils.js";
+import { Ao3_Work_Error } from "./Ao3_Work_Error.js";
 
 class Ao3_Work {
   /**

@@ -3,8 +3,9 @@
 // @author    Lavatrout
 // @version   0.01
 // @run-at    document-end
+// @namespace https://github.com/lavatrout/Userscripts
 // @include   */archiveofourown.org/*works/*
-// @require   https://
+// TODO @require   https://github.com/lavatrout/Userscripts/
 // ==/UserScript==
 
 (async () => {
