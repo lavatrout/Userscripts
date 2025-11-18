@@ -8,14 +8,8 @@
 // @grant        GM.getValue
 // @grant        GM.setValue
 // @grant        GM.deleteValue
-// TODO @require     Ao3_Work_Error.user.js
+// @require      https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js
 // ==/UserScript== 
-
-// import Ao3_Work_Error.js
-import "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js";
-
-// import GM
-//import { } from "https://github.com/greasemonkey/greasemonkey/tree/8a51d1432e8c1adbd761d2654b030e11efc11b74/src/bg/api-provider-source.js";
 
 /**
    * Returns the HTML DOM document of a given URL.
@@ -23,6 +17,9 @@ import "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_
    * @returns {Document} The DOM document of the remote URL.
    */
 async function getRemoteHTML(target_url) {
+    // TODO delete me
+    console.log("Fetching Remote HTML Document...");
+
     // poll GM targetWork until it is deleted
     await GM.deleteValue("targetWork");
     while (await GM.getValue("targetWork") != null) {

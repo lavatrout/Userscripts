@@ -4,10 +4,9 @@
 // @version      0.0.01
 // @description  Ao3 Work Object and Metadata Scraper
 // @author       Lavatrout
+// @require			 https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Utils.js
+// @require			 https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js
 // ==/UserScript==
-
-import "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work_Utils.js";
-import "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js"
 
 /**
  * Ao3 Work Object Class
@@ -21,6 +20,10 @@ class Ao3_Work {
    * @param {int}     read_speed          number words read per minute
    */
   constructor(target_url, haitus_tolerance, read_speed) {
+
+    // TODO delete me
+    console.log("Creating Ao3 Work Object...");
+
     // set up the top level pieces of data for the ao3 work
     this.readSpeed = read_speed;
     this.haitusTolerance = haitus_tolerance;
@@ -48,12 +51,12 @@ class Ao3_Work {
     this.readTime = "default_read_time";
   }
 
-
   /**
    * populates the Ao3 Work Object with metadata scraped from AO3
    */
   async populateAo3MetaData() {
 
+    // TODO delete me
     console.log("Running Metadata Scraper...");
 
     // TODO add error handling using Ao3_Work_Error
