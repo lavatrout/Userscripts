@@ -5,8 +5,10 @@
 // @run-at    document-end
 // @namespace https://github.com/lavatrout/Userscripts
 // @include   */archiveofourown.org/*works/*
-// @require   "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Ao3_Work.js";
+// @require   "https://github.com/lavatrout/Userscripts/raw/refs/heads/v0.0.01/Ao3/Test_Driver_Importer.js";
 // ==/UserScript==
+
+import { Ao3_Work } from "../common/Import_Aggragator.js";
 
 (async () => {
   console.log("Running GreaseMonkey Script: " + GM.info.script.name + " ...");
@@ -18,7 +20,7 @@
     //   364,
     //   200
     // );
-    await ao3Work.ao3MetaDataScraper();
+    await ao3Work.populateAo3MetaData();
     console.log(ao3Work);
   };
 })();

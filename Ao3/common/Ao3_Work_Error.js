@@ -7,6 +7,9 @@
 // @author       Lavatrout
 // ==/UserScript==
 
+// define exports
+export { Ao3_Work_Error };
+
 /**
  * Custom error type for AO3 Work related errors.
  */

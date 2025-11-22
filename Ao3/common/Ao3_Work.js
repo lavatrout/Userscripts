@@ -4,9 +4,32 @@
 // @version      0.0.01
 // @description  Ao3 Work Object and Metadata Scraper
 // @author       Lavatrout
-// @require			 https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Utils.js
-// @require			 https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js
+// require			 https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Utils.js
+// require			 https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js
 // ==/UserScript==
+
+// define exports
+export { Ao3_Work };
+
+// import dependencies
+import {
+  getWorkId,
+  getCurrentChapter,
+  getTitle,
+  getAuthor,
+  getDatePosted,
+  getNumChaptersTotal,
+  getDateUpdated,
+  getNumChaptersCompleted,
+  getSummary,
+  getIsCollected,
+  getIsInSeries,
+  getWordCount,
+  calcIsHaitus,
+  calcReadTime,
+  getRemoteHTML,
+} from "./Import_Aggragator.js";
+import { Ao3_Work_Error } from "./Import_Aggragator.js";
 
 /**
  * Ao3 Work Object Class
@@ -24,31 +47,40 @@ class Ao3_Work {
     // TODO delete me
     console.log("Creating Ao3 Work Object...");
 
-    // set up the top level pieces of data for the ao3 work
-    this.readSpeed = read_speed;
-    this.haitusTolerance = haitus_tolerance;
-    this.currentUrl = target_url;
-    this.currentDoc = document;
-    this.currentChapter = getCurrentChapter(this.currentDoc);
-    this.workId = getWorkId(this.currentUrl);
-    this.baseUrl = "https://archiveofourown.org/works/" + this.workId;
+    try {
+      // set up the top level pieces of data for the ao3 work
+      this.readSpeed = read_speed;
+      this.haitusTolerance = haitus_tolerance;
+      this.currentUrl = target_url;
+      this.currentDoc = document;
+      this.currentChapter = getCurrentChapter(this.currentDoc);
+      this.workId = getWorkId(this.currentUrl);
+      this.baseUrl = "https://archiveofourown.org/works/" + this.workId;
 
-    // initialize default pieces of metadata for the ao3 work
-    this.baseDoc = null;
-    this.title = "default_title";
-    this.author = "default_author";
-    this.summary = "default_summary";
-    this.isOneShot = false;
-    this.datePosted = "default_date_posted";
-    this.dateUpdated = "default_date_updated";
-    this.numChaptersCompleted = -111;
-    this.numChaptersTotal = -111;
-    this.isComplete = false;
-    this.isHaitus = false;
-    this.isCollected = false;
-    this.isSeries = false;
-    this.wordCount = -111;
-    this.readTime = "default_read_time";
+      // initialize default pieces of metadata for the ao3 work
+      this.baseDoc = null;
+      this.title = "default_title";
+      this.author = "default_author";
+      this.summary = "default_summary";
+      this.isOneShot = false;
+      this.datePosted = "default_date_posted";
+      this.dateUpdated = "default_date_updated";
+      this.numChaptersCompleted = -111;
+      this.numChaptersTotal = -111;
+      this.isComplete = false;
+      this.isHaitus = false;
+      this.isCollected = false;
+      this.isSeries = false;
+      this.wordCount = -111;
+      this.readTime = "default_read_time";
+    }
+    catch (e) {
+      throw new Ao3_Work_Error("Error creating Ao3_Work Object", e);
+    }
+
+    // TODO delete me
+    console.log("Ao3 Work Object Created.");
+
   }
 
   /**
@@ -57,7 +89,7 @@ class Ao3_Work {
   async populateAo3MetaData() {
 
     // TODO delete me
-    console.log("Running Metadata Scraper...");
+    console.log("Start scraping Ao3 Meta Data...");
 
     // TODO add error handling using Ao3_Work_Error
 
@@ -111,6 +143,9 @@ class Ao3_Work {
     this.isSeries = getIsInSeries(this.baseDoc);
     this.wordCount = getWordCount(this.baseDoc);
 
+    // TODO delete me
+    console.log("Done scraping Ao3 Meta Data.");
+
     // ------------------------------------------------------------------------------------------------
     // --  Meta Data Scraped
     // ------------------------------------------------------------------------------------------------
@@ -128,7 +163,5 @@ class Ao3_Work {
 
     // calculate estimated read time (in minutes)
     this.readTime = calcReadTime(this.wordCount, this.readSpeed);
-
-    console.log("Metadata Scraper Complete.");
   }
 }

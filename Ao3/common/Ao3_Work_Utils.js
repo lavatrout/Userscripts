@@ -11,12 +11,35 @@
 // @require      https://raw.githubusercontent.com/lavatrout/Userscripts/refs/heads/v0.0.01/Ao3/Ao3_Work_Error.js
 // ==/UserScript== 
 
+// define exports
+export {
+    getWorkId,
+    getCurrentChapter,
+    getTitle,
+    getAuthor,
+    getDatePosted,
+    getNumChaptersTotal,
+    getDateUpdated,
+    getNumChaptersCompleted,
+    getSummary,
+    getIsCollected,
+    getIsInSeries,
+    getWordCount,
+    calcIsHaitus,
+    calcReadTime,
+    getRemoteHTML,
+};
+
+import { Ao3_Work_Error } from "./Import_Aggragator.js";
+
 /**
    * Returns the HTML DOM document of a given URL.
    * @param {string} target_url  The URL of the remote page to get.
    * @returns {Document} The DOM document of the remote URL.
    */
 async function getRemoteHTML(target_url) {
+    // TODO add error handling using Ao3_Work_Error
+
     // TODO delete me
     console.log("Fetching Remote HTML Document...");
 

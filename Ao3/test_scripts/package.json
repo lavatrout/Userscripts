@@ -1,0 +1,13 @@
+{
+	"name": "ao3-test-scripts",
+	"version": "0.00.01",
+	"description": "Used to test AO3 userscripts during development.",
+	"main": "./Test_Driver.user.js",
+	"scripts": {
+		"test": "node ./Test_Driver.user.js"
+	},
+	"keywords": [],
+	"author": "lavatrout",
+	"license": "ISC",
+	"type": "module"
+}

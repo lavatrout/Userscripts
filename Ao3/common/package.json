@@ -1,0 +1,10 @@
+{
+	"name": "ao3-common",
+	"version": "0.00.01",
+	"description": "All common code used by AO3 userscripts.",
+	"main": "echo \"This is a common package and does not have a main file.\"",
+	"keywords": [],
+	"author": "lavatrout",
+	"license": "ISC",
+	"type": "module"
+}
